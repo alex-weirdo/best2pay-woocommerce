@@ -94,8 +94,14 @@ class AS_UPDATER
 	}
 
 	public function extractFiles() {
-        exec("cd $this->TARGET_DIR.. && " . 'tar xvfz ' . $this->last_version->tag_name . '.tar.gz && rm ' . $this->last_version->tag_name . '.tar.gz');
-        return $this->TARGET_DIR;
+        exec(
+            "cd $this->TARGET_DIR.. && " .
+            'tar xvfz ' . $this->last_version->tag_name . '.tar.gz && ' .
+            'rm ' . $this->last_version->tag_name . '.tar.gz && ' .
+            'cp -r ' . $this->repo . '-' . $this->last_version->name . '/* ' . $this->repo . ' && ' .
+            'rm -r ' . $this->repo . '-' . $this->last_version->name
+        );
+        return;
     }
 
 	public function onAdminInit() {
