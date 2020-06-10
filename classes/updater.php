@@ -118,7 +118,7 @@ class AS_UPDATER
 			if ( !empty($linkText) ) {
 				/** @noinspection HtmlUnknownTarget */
 				$pluginMeta[] = sprintf('<a id="updatePlugin" class="%s" name="%s" style="%s"><strong>%s</strong></a>',
-					(!$this->ERROR) ? 'ok' : '',
+					(!$this->ERROR) ? 'ok ' . (($ver) ? 'need_update' : '') : '',
 					$pluginFile,
 					$style = ($this->has_update) ? 'color:#07c907' : (($this->ERROR) ? 'color:#ff0202' : '') ,
 					$text = ($this->ERROR) ? $this->ERROR : $linkText);

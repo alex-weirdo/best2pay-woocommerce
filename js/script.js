@@ -1,9 +1,10 @@
 $j = jQuery.noConflict();
 
 jQuery(window).on('load', function () {
-    var $updateLink = $j('table.plugins #updatePlugin.ok');
+    var $updateLink = $j('table.plugins #updatePlugin.ok.need_update');
     $updateLink.on('click', function(e) {
         e.preventDefault();
+        $this.removeClass('need_update').parent().parent().addClass('disabled');
         updatePlugin($j(this));
         });
 

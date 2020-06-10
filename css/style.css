@@ -1,3 +1,8 @@
-a#updatePlugin {
+a#updatePlugin.need_update {
     cursor: pointer;
+}
+td.desc.disabled {
+    transition: .5s;
+    opacity: .3;
+    cursor: not-allowed;
 }
