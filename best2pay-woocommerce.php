@@ -18,7 +18,7 @@
  * Plugin Name: Best2Pay For WooCommerce (Visa/MasterCard)
  * Plugin URI: http://best2pay.net/
  * Description: Receive payments via Visa/Mastercard easily with Best2Pay bank cards processing
- * Version: 1.2
+ * Version: 1.1
  * Author: Dennis Prochko
  * Author URI: mailto:wolfsoft@mail.ru
  * Requires at least: 3.5
